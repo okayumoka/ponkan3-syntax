@@ -1,0 +1,144 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ponkan3",
+	"scopeName": "source.pon3",
+	"patterns": [
+		{
+			"include": "#javascript-block"
+		},
+		{
+			"include": "#javascript-line"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#label"
+		},
+		{
+			"include": "#savemark"
+		},
+		{
+			"include": "#command"
+		}
+	],
+	"repository": {
+		"javascript-block": {
+			"name": "meta.block.js.ponkan3",
+			"begin": "^[ \t]*---[ \t]*$",
+			"end": "^[ \t]*---[ \t]*$",
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+		},
+		"javascript-line": {
+			"name": "meta.line.js.ponkan3",
+			"begin": "^[ \t]*(-|=)",
+			"end": "$",
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+		},
+		"comment": {
+			"name": "meta.comment.ponkan3",
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.ponkan3",
+					"match": "^[ \t]*#.*$"
+				}
+			]
+		},
+		"label": {
+			"name": "meta.label.ponkan3",
+			"patterns": [
+				{
+					"name": "entity.name.tag.ponkan3",
+					"match": "^[ \t]*\\*.*$"
+				}
+			]
+		},
+		"savemark": {
+			"name": "meta.savemark.ponkan3",
+			"patterns": [
+				{
+					"name": "entity.name.type.ponkan3",
+					"match": "^[ \t]*\\|([^:]*)(:?)(.*)$",
+					"captures": {
+						"1": {
+							"name": "meta.savemark.name.ponkan3"
+						},
+						"2": {
+							"name": "meta.savemark.separator.ponkan3"
+						},
+						"3": {
+							"name": "meta.savemark.text.ponkan3"
+						}
+					}
+				}
+			]
+		},
+		"command": {
+			"name": "meta.command.ponkan3",
+			"patterns": [
+				{
+					"name": "keyword.control.ponkan3",
+					"match": "^[ \t]*;[ \t]*([^ \t{}]+)\\b",
+					"captures": {
+						"0": {
+							"name": "meta.command.ponkan3"
+						}
+					}
+				},
+				{
+					"include": "#command-values"
+				}
+			]
+		},
+		"command-values": {
+			"patterns": [
+				{
+					"name": "meta.objectliteral.js.ponkan3",
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.js.ponkan3"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.js.ponkan3"
+						}
+					},
+					"patterns": [
+						{
+							"include": "source.js#object-member"
+						}
+					]
+				},
+				{
+					"name": "meta.objectliteral.js.ponkan3",
+					"begin": "([^ \t{]+)[ \t]*(:)",
+					"beginCaptures": {
+						"1": {
+							"name": "meta.object-literal.key.js.ponkan3"
+						},
+						"2": {
+							"name": "punctuation.separator.key-value.js.ponkan3"
+						}
+					},
+					"end": "(,|$)",
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
+				}
+			]
+		}
+	}
+}

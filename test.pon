@@ -1,0 +1,47 @@
+# コメント行
+;layopt { "width":100, "height":200, "visible":true }
+;     layopt    {      "width"   :   100     , "height"   :   200 ,    "visible"   :   true    }
+;meslay{"width":100,"height":200,"visible":true,"file":"hogehoge.png"}
+;layopt { "width":100, "height":200, "visible":true }
+;layopt { hoge: 100, piyo: 200 }
+      ;layopt hoge: 100, piyo: 200
+;layopt {
+  hoge: 100,
+  piyo: 200
+}
+;s
+
+吾輩は猫である。名前はまだない。
+  hoge
+
+|save001:セーブマーク
+|セーブマーク
+
+{ hoge: 100, piyo: 200 }
+
+# ラベル
+*sample-label
+  *sample-label
+
+# JavaScript
+- console.log('Test Script.');
+= console.log('Test Script.');
+-console.log('Test Script.');
+=console.log('Test Script.');
+  -console.log('Test Script.');
+  =console.log('Test Script.');
+    = "JSで" + "生成したメッセージ" + "です。"
+
+# JavaScript部
+---
+  var hoge = 100;
+  console.log(hoge);
+  var piyo = {
+    hoge: 100,
+    piyo: 200
+  };
+---
+
+// hogehoge
+
+おわり。
