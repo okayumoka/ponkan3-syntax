@@ -22,18 +22,6 @@
           "pon3"
         ],
         "configuration": "./language-configuration.json"
-      },
-      {
-        "id": "javascript",
-        "aliases": [
-          "JavaScript",
-          "javascript",
-          "js"
-        ],
-        "extensions": [
-          ".js"
-        ],
-        "configuration": "./javascript-language-configuration.json"
       }
     ],
     "grammars": [
@@ -42,13 +30,9 @@
         "scopeName": "source.pon3",
         "path": "./syntaxes/ponkan3.tmLanguage.json",
         "embeddedLanguages": {
+          "meta.block.js.ponkan3": "javascript",
           "source.js": "javascript"
         }
-      },
-      {
-        "language": "javascript",
-        "scopeName": "source.js",
-        "path": "./syntaxes/JavaScript.tmLanguage.json"
       }
     ]
   }
