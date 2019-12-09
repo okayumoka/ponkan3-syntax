@@ -2,7 +2,9 @@
   "name": "ponkan3-syntax",
   "displayName": "Ponkan3 Syntax",
   "description": "Syntax Highlight for Ponkan3",
-  "version": "0.1.0",
+  "publisher": "studiomikan",
+  "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.38.0"
   },
