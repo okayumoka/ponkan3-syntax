@@ -5,7 +5,7 @@
   "publisher": "studiomikan",
   "version": "0.1.1",
   "license": "MIT",
-  "repository": "https://github.com/okayumoka/ponkan3-syntax",
+  "repository": "https://github.com/studiomikan/ponkan3-syntax",
   "engines": {
     "vscode": "^1.38.0"
   },
