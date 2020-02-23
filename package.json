@@ -1,11 +1,11 @@
 {
-  "name": "ponkan3-syntax",
-  "displayName": "Ponkan3 Syntax",
-  "description": "Syntax Highlight for Ponkan3",
+  "name": "ponkan-syntax",
+  "displayName": "Ponkan Syntax",
+  "description": "Syntax Highlight for Ponkan",
   "publisher": "studiomikan",
-  "version": "0.1.2",
+  "version": "0.0.1",
   "license": "MIT",
-  "repository": "https://github.com/studiomikan/ponkan3-syntax",
+  "repository": "https://github.com/studiomikan/ponkan-syntax",
   "engines": {
     "vscode": "^1.38.0"
   },
@@ -15,25 +15,25 @@
   "contributes": {
     "languages": [
       {
-        "id": "ponkan3",
+        "id": "ponkan",
         "aliases": [
-          "Ponkan3",
-          "ponkan3"
+          "Ponkan",
+          "ponkan"
         ],
         "extensions": [
           ".pon",
-          "pon3"
+          "pon"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "ponkan3",
-        "scopeName": "source.pon3",
-        "path": "./syntaxes/ponkan3.tmLanguage.json",
+        "language": "ponkan",
+        "scopeName": "source.pon",
+        "path": "./syntaxes/ponkan.tmLanguage.json",
         "embeddedLanguages": {
-          "meta.block.js.ponkan3": "javascript",
+          "meta.block.js.ponkan": "javascript",
           "source.js": "javascript"
         }
       }
