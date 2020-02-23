@@ -3,7 +3,7 @@
   "displayName": "Ponkan Syntax",
   "description": "Syntax Highlight for Ponkan",
   "publisher": "studiomikan",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "repository": "https://github.com/studiomikan/ponkan-syntax",
   "engines": {
