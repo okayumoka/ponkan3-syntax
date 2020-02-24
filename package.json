@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "https://github.com/studiomikan/ponkan-syntax"
+    "url": "https://github.com/studiomikan/ponkan-syntax"
   },
   "icon": "images/icon.png",
   "engines": {
